@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control your Duplo train using a slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        #speedSlider {
+            width: 100%;
+            margin: 20px 0;
+        }
+        #speedDisplay {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .connect {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .connect:disabled {
+            background-color: #cccccc;
+        }
+        .success {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Control your Duplo train using a slider</h1>
+    <p>Move the slider to control the train's speed.</p>
+
+    <input type="range" id="speedSlider" min="0" max="100" value="0">
+    <p id="speedDisplay">Speed: 0</p>
+
+    <button class="connect">Connect to the Duplo train</button>
+    <p class="success"></p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
