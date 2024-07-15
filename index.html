@@ -10,9 +10,11 @@
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
+            background-color: #F2F2F2;
+            color: #333;
         }
         h1 {
-            color: #333;
+            color: #0057A6; /* Cor azul do Lego */
         }
         #speedSlider {
             width: 100%;
@@ -22,15 +24,26 @@
             font-size: 18px;
             font-weight: bold;
         }
-        .connect {
+        button {
             padding: 10px 20px;
             font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
+            margin: 5px;
             border: none;
             cursor: pointer;
         }
-        .connect:disabled {
+        .connect {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+        }
+        .stop {
+            background-color: #D62828; /* Vermelho */
+            color: white;
+        }
+        .max-speed {
+            background-color: #FFCA28; /* Amarelo */
+            color: white;
+        }
+        .connect:disabled, .stop:disabled, .max-speed:disabled {
             background-color: #cccccc;
         }
         .success {
@@ -47,6 +60,8 @@
     <p id="speedDisplay">Speed: 0</p>
 
     <button class="connect">Connect to the Duplo train</button>
+    <button class="stop">Stop</button>
+    <button class="max-speed">Max Speed</button>
     <p class="success"></p>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
